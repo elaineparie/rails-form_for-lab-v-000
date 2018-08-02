@@ -12,7 +12,7 @@ class SchoolClassesController < ActionController::Base
   end
 
   def show
-    @school_classes = SchoolClass.all
+    @school_class = SchoolClass.find(params[:id])
   end
 
   private
