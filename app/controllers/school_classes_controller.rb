@@ -15,6 +15,10 @@ class SchoolClassesController < ActionController::Base
     @school_class = SchoolClass.find(params[:id])
   end
 
+  def edit
+	  @post = Post.find(params[:id])
+	end
+  
   private
 
 def school_class_params(*args)
