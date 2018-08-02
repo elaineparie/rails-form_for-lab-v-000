@@ -10,6 +10,10 @@ class StudentsController < ActionController::Base
     redirect_to student_path(@student)
   end
 
+def show
+    @student = Student.find(params[:id])
+
+end
   private
 
 def students_params(*args)
