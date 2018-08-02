@@ -15,16 +15,16 @@ def show
   end
 
     def edit
-      @school_class = SchoolClass.find(params[:id])
+      @student = Student.find(params[:id])
     end
 
     def update
-      @school_class = SchoolClass.find(params[:id])
-  @school_class.update(school_class_params(:title, :room_number))
-  redirect_to school_class_path(@school_class)
+      @student = Student.find(params[:id])
+  @Student.update(student_params(:first_name, :last_name))
+  redirect_to student_path(@student)
     end
 
-end
+
   private
 
 def students_params(*args)
